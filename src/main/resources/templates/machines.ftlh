@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    Hello Test Project
+<h1>Цех №3 Механический</h1>
+<h4>Рабочие центры</h4>
+<#list machines as WorkCenter>
+    <div>
+        <p><b>${WorkCenter.title}</b>${WorkCenter.code} | <a href="/WorkCenter/${WorkCenter.id}"> Перейти...</a></p>
+
+    </div>
+</#list>
+<hr>
+<h3>Добавить рабочий центр</h3>
+<hr>
+<form action="/WorkCenter/create" method="post">
+    Название рабочего центра <input type="text" name="title"/><br><br>
+    Код рабочего центра <input type="text" name="code"/><br><br>
+    Узел ПЛМ <input type="text" name="plm"/><br><br>
+    <input type="submit" value="Добавить РЦ"/>
+</form>
 </body>
 </html>
