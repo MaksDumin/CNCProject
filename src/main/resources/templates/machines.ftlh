@@ -10,7 +10,7 @@
 <h4>Рабочие центры</h4>
 <#list machines as WorkCenter>
     <div>
-        <p><b>${WorkCenter.title}</b>${WorkCenter.code} | <a href="/WorkCenter/${WorkCenter.id}"> Перейти...</a></p>
+        <p><b>${WorkCenter.title}</b>&nbsp${WorkCenter.code} &nbsp | <a href="/WorkCenter/${WorkCenter.id}"> Перейти...</a></p>
 
     </div>
 </#list>
