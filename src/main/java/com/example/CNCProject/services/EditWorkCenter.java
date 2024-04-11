@@ -1,6 +1,7 @@
 package com.example.CNCProject.services;
 
 import com.example.CNCProject.models.WorkCenter;
+import com.example.CNCProject.models.WorkCenter1;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -10,6 +11,7 @@ import java.util.List;
 public class EditWorkCenter {
     private List<WorkCenter> workCenters = new ArrayList<>();
     private long ID = 0;
+    private List<WorkCenter1> workCenter1s = new ArrayList<>();
 
     {
         workCenters.add(new WorkCenter(++ID, "Продольно-фрезерный обрабатывающий центр c ЧПУ(LBV-2219)", "3.1.5", "Цех №3"));
@@ -24,9 +26,9 @@ public class EditWorkCenter {
         return workCenters;
     }
 
-    public void saveWorkCenter(WorkCenter workCenter) {
-        workCenter.setId(++ID);
-        workCenters.add(workCenter);
+    public void saveWorkCenter(WorkCenter1 workCenter1) {
+        //workCenter.setId(++ID);
+        workCenter1s.add(workCenter1);
     }
 
     public void deleteWorkCenter(Long id) {
