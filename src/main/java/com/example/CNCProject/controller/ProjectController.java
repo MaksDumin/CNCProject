@@ -6,10 +6,7 @@ import com.example.CNCProject.services.EditWorkCenter;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.MultiValueMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,8 +19,8 @@ public class ProjectController {
     }
 
     @GetMapping ("/")
-    public String machines(Model model) {
-        model.addAttribute("machines",editWorkCenter.listWorkCenters());
+    public String machines(@RequestParam(name = "title", required = false) String title, Model model) {
+        model.addAttribute("machines",editWorkCenter.listWorkCenters(title));
         return "machines";
     }
     @GetMapping("/WorkCenter/{id}")
@@ -32,7 +29,7 @@ public class ProjectController {
         return "infoworkcenter";
     }
     @PostMapping("/WorkCenter/create")
-    public String createWorkCenter(WorkCenter1 workCenter) {
+    public String createWorkCenter(WorkCenter workCenter) {
         editWorkCenter.saveWorkCenter(workCenter);
         return "redirect:/";
     }
