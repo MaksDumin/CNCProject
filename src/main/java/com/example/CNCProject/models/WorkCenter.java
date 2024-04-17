@@ -1,5 +1,4 @@
 package com.example.CNCProject.models;
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,13 +15,13 @@ public class WorkCenter {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "title", columnDefinition = "text")
-    private String title;
+    @Column(name = "center", columnDefinition = "text")
+    private String center;
 
-    @Column(name = "code")
-    private String code;
+    @Column(name = "error")
+    private String error;
 
-    @Column(name = "plm")
-    private String plm;
+    @Column(name = "data")
+    private String data;
 }
 

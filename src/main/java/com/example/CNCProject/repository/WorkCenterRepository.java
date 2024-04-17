@@ -6,5 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface WorkCenterRepository extends JpaRepository<WorkCenter, Long> {
-    List<WorkCenter> findByTitle(String title);
+    List<WorkCenter> findByCenter(String center);
 }
