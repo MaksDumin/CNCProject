@@ -12,7 +12,7 @@
 <b>Событие: </b>${machines.error}<br>
 <b>Дата/Время: </b>${machines.data}<br>
 <hr>
-<h3>Добавить рабочий центр</h3>
+<h3>Удалить событие</h3>
 <form action="/WorkCenter/delete/${machines.id}" method="post">
     <input type="submit" value="Удалить">
 </form>

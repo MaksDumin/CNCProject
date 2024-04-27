@@ -27,12 +27,11 @@ public class ProjectController {
     @PostMapping("/WorkCenter/create")
     public String createWorkCenter(WorkCenter workCenter) {
         editWorkCenterServices.saveWorkCenter(workCenter);
-        return "redirect:/";
+        return "index";
     }
     @PostMapping("WorkCenter/delete/{id}")
     public String deleteWorkCenter(@PathVariable Long id) {
         editWorkCenterServices.deleteWorkCenter(id);
         return "redirect:/";
     }
-
 }
